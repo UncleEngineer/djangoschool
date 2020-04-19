@@ -1,0 +1,27 @@
+
+{% extends 'school/base.html' %}
+
+{% block content %}
+
+<div class="container">
+  
+        <form method="POST">
+          {% csrf_token %}
+
+          <div class="form-group w-50">
+            <label for="username">อีเมลล์:</label>
+            <input type="text" class="form-control" id="username" name="username">
+          </div>
+
+          <div class="form-group w-50">
+            <label for="password">รหัสผ่าน:</label>
+            <input type="password" class="form-control" id="password" name="password">
+          </div>
+
+          <button type="submit" class="btn btn-primary">เข้าสู่ระบบ</button>
+
+        </form>
+
+</div>
+
+{% endblock content %}

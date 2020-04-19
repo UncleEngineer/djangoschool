@@ -1,0 +1,39 @@
+{% extends 'school/base.html' %}
+
+{% block content %}
+<div class="container">
+		<form method="POST">
+		{% csrf_token %}
+		  <input type="text" placeholder="ค้นหาข้อมูลนักเรียน" name="search">
+		  <button type="submit"><i class="fa fa-search"></i></button>
+		</form>
+</div>
+
+<div class="container">
+	<br><br>
+	
+	{% if check == 'found' %}
+		{% if result.photo %}
+			<div class="container" style="margin-top: 20px; margin-bottom: 20px">
+				<img src="{{result.photo.url}}"  width="200">
+			</div>
+		{% else %}
+			<div class="container" style="margin-top: 20px; margin-bottom: 20px">
+				<img src="../media/studentphoto/default.png" width="200">
+			</div>
+		{% endif %}
+
+		<p>ID: {{result.student_id}} ชื่อนักเรียน: {{result.student_name}}</p>
+	{% elif check == 'notfound' %}
+	<h1>{{result}}</h1>
+	{% else %}
+	<p>กรุณาค้นหาข้อมูลนักเรียนโดยกรอกรหัสประจำตัวลงไป</p>
+	{% endif %}
+</div>
+
+
+
+
+
+
+{% endblock content %}

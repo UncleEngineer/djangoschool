@@ -1,0 +1,65 @@
+{% extends 'school/base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <center>
+
+  <table style="width:100%">
+  	<tr><th>ชื่อไฟล์หนังสือ/เอกสาร ม.1</th><th>คำอธิบาย</th></tr>
+  {% for dc in document %}
+  		{% if dc.level == 'ม.1' %}
+		      <tr><td><a href="{{dc.document.url}}">{{dc.document_name}}</a></td><td>{{dc.other}}</td></tr>
+		{% endif %}		
+  {% endfor %}
+  </table><br>
+
+    <table style="width:100%">
+  	<tr><th>ชื่อไฟล์หนังสือ/เอกสาร ม.2</th><th>คำอธิบาย</th></tr>
+  {% for dc in document %}
+  		{% if dc.level == 'ม.2' %}
+		      <tr><td><a href="{{dc.document.url}}">{{dc.document_name}}</a></td><td>{{dc.other}}</td></tr>
+		{% endif %}  
+  {% endfor %}
+  </table><br>
+
+    <table style="width:100%">
+  	<tr><th>ชื่อไฟล์หนังสือ/เอกสาร ม.3</th><th>คำอธิบาย</th></tr>
+  {% for dc in document %}
+  		{% if dc.level == 'ม.3' %}
+		      <tr><td><a href="{{dc.document.url}}">{{dc.document_name}}</a></td><td>{{dc.other}}</td></tr>
+		{% endif %}  
+  {% endfor %}
+  </table><br>
+
+    <table style="width:100%">
+  	<tr><th>ชื่อไฟล์หนังสือ/เอกสาร ม.4</th><th>คำอธิบาย</th></tr>
+  {% for dc in document %}
+  		{% if dc.level == 'ม.4' %}
+		      <tr><td><a href="{{dc.document.url}}">{{dc.document_name}}</a></td><td>{{dc.other}}</td></tr>
+		{% endif %}  
+  {% endfor %}
+  </table><br>
+
+    <table style="width:100%">
+  	<tr><th>ชื่อไฟล์หนังสือ/เอกสาร ม.5</th><th>คำอธิบาย</th></tr>
+  {% for dc in document %}
+  		{% if dc.level == 'ม.5' %}
+		      <tr><td><a href="{{dc.document.url}}">{{dc.document_name}}</a></td><td>{{dc.other}}</td></tr>
+		{% endif %}  
+  {% endfor %}
+  </table><br>
+
+    <table style="width:100%">
+  	<tr><th>ชื่อไฟล์หนังสือ/เอกสาร ม.6</th><th>คำอธิบาย</th></tr>
+  {% for dc in document %}
+  		{% if dc.level == 'ม.6' %}
+		      <tr><td><a href="{{dc.document.url}}">{{dc.document_name}}</a></td><td>{{dc.other}}</td></tr>
+		{% endif %}  
+  {% endfor %}
+  </table><br>
+  </center>
+
+</div>
+
+{% endblock content %}
